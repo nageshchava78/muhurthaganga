@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glamour Makeup Studio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#fffafc;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    margin-top:15px;
+    font-size:1.2rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 25px;
+    background:#e91e63;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+}
+
+section{
+    padding:60px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    color:#e91e63;
+    font-size:2rem;
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+}
+
+.service-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.service-card h3{
+    padding:15px;
+    color:#e91e63;
+}
+
+.service-card p{
+    padding:0 15px 20px;
+}
+
+.testimonials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.testimonial{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.contact-container{
+    max-width:700px;
+    margin:auto;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+button{
+    background:#e91e63;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#c2185b;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+    header h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Glamour Makeup Studio</h1>
+    <p>Enhancing Beauty, Creating Confidence</p>
+    <a href="#contact" class="btn">Book Appointment</a>
+</header>
+
+<section>
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800" alt="HD Makeup">
+            <h3>HD Makeup</h3>
+            <p>High-definition makeup that looks flawless both in person and on camera for special events and photoshoots.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800" alt="Bridal Makeup">
+            <h3>Bridal Makeup</h3>
+            <p>Professional bridal makeup packages tailored to your wedding theme and personal style.</p>
+        </div>
+
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800" alt="Nail Art">
+            <h3>Nail Art</h3>
+            <p>Creative and elegant nail art designs to complement your beauty and fashion statement.</p>
+        </div>
+
+    </div>
+</section>
+
+<section style="background:#fff0f5;">
+    <h2 class="section-title">Client Testimonials</h2>
+
+    <div class="testimonials">
+
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+            <h3>Priya S.</h3>
+            <p>"My bridal makeup was absolutely stunning. I received compliments throughout the wedding day."</p>
+        </div>
+
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client">
+            <h3>Anjali R.</h3>
+            <p>"The HD makeup looked perfect in every photograph. Highly recommended!"</p>
+        </div>
+
+        <div class="testimonial">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Client">
+            <h3>Swetha K.</h3>
+            <p>"Amazing nail art designs and excellent service. I will definitely come back."</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-container">
+
+        <form action="#" method="post">
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Email Address" required>
+
+            <input type="tel" placeholder="Phone Number" required>
+
+            <input type="text" placeholder="Service Interested In">
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Inquiry</button>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    <h3>Glamour Makeup Studio</h3>
+    <p>📞 +91 98765 43210</p>
+    <p>📧 info@glamourmakeupstudio.com</p>
+    <p>© 2026 Glamour Makeup Studio. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
